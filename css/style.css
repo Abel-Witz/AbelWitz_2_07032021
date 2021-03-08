@@ -1,0 +1,230 @@
+/* Main divs*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainFrame {
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Header */
+.pageHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pageHeader__logo {
+    margin-top: 20px;
+    width: 97px;
+    height: 45px;
+}
+
+.buttonGroup__signupButton {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0065fc;
+}
+
+.buttonGroup__signupButton:hover {
+    filter: brightness(50%);
+}
+
+/* mieux détailler les media queries conditions */
+/* Medium and large screens */
+@media only screen and (min-width: 601px) {
+    .buttonGroup__navButtons {
+        display: inline;
+    }
+
+    .navButtons__sectionButton {
+        display: inline-block;
+        padding-top: 45px;
+        text-decoration: none;
+        margin-left: 32.5px;
+        margin-right: 32.5px;
+    }
+
+    .navButtons__sectionButton:hover {
+        padding-top: 43px;
+        border-top: 2px solid #0065fc;
+    }
+
+    .navButtons__sectionButton--blue {
+        color: #0065fc;
+    }
+
+    .navButtons__sectionButton--black {
+        color:  black;
+    }
+
+    .buttonGroup__signupButton {
+        margin-left: 32.5px;
+    }
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .pageHeader__buttonGroup {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 3.5vw;
+        width: 93vw;
+    }
+
+    .buttonGroup__navButtons {
+        display: flex;
+        width: 100vw;
+        position: relative;
+        left: -3.5vw;
+    }
+
+    .navButtons__sectionButton {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        padding-bottom: 13px;
+        text-decoration: none;
+    }
+
+    .navButtons__sectionButton:hover {
+        border-bottom: 2px solid #0065fc;
+        padding-bottom: 11px;
+    }
+
+    .navButtons__sectionButton--blue {
+        color: #0065fc;
+    }
+
+    .navButtons__sectionButton--black {
+        color:  black;
+    }
+
+    .buttonGroup__signupButton {
+        margin: 45px 0px auto auto;
+    }
+}
+
+
+/* Fonts */
+.ralewayThin {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+/*
+
+.section_button {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 13px;
+    padding-top: 0px;
+}
+
+.section_button:hover {
+    display: inline-block;
+    margin-top: 30px;
+    border-top: 2px solid #0065fc;
+
+    border-top: 0px solid black;
+    padding-bottom: 13px;
+    padding-top: 0px;
+    border-bottom: 2px solid #0065fc;
+    text-decoration: none;
+}
+
+.section_button_blue {
+    display: inline-block;
+    margin-top: 2px;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+.section_button_blue:hover {
+    display: inline-block;
+    margin-top: 0px;
+    border-top: 2px solid #0065fc;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+.section_button_blue {
+    display: inline-block;
+    margin-top: 2px;
+    color: #0065fc;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+.section_button_blue:hover {
+    display: inline-block;
+    margin-top: 0px;
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+.section_button_black {
+    display: inline-block;
+    margin-top: 2px;
+    color: black;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+.section_button_black:hover {
+    display: inline-block;
+    margin-top: 0px;
+    color: black;
+    border-top: 2px solid black;
+    vertical-align: bottom;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .signup_button {
+        margin-right: 0px;
+        margin-left: auto;
+    }
+
+    .section_button {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        padding-bottom: 13px;
+        padding-top: 0px;
+    }
+    
+    .section_button:hover {
+        display: inline-block;
+        margin-top: 30px;
+        border-top: 2px solid #0065fc;
+        vertical-align: top;
+        border-top: 0px solid black;
+        padding-bottom: 13px;
+        padding-top: 0px;
+        border-bottom: 2px solid #0065fc;
+        text-decoration: none;
+    }
+}
+
+*/
