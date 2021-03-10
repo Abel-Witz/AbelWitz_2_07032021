@@ -2,14 +2,10 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-.mainFrame {
     width: 93%;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 /* Header */
 .pageHeader {
@@ -86,12 +82,53 @@ body {
 }
 
 .searchBar__button:hover {
-    filter: brightness(75%);
+    background-color: #0052cc;
     cursor: pointer;
 }
 
 .searchBar__button:active {
     border: none;
+}
+
+
+/* Footer */
+footer {
+    width: 93vw;
+    margin-left: -3.5vw;
+    position: absolute;
+    bottom: 0;
+    padding: 3.5%;
+    background-color: #F2F2F2;
+}
+
+.footer__information {
+    display: flex;
+}
+
+.information__category {
+    width: 450px;
+}
+
+.category__linkList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category__linkList > li {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.linkList__link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.linkList__link:hover {
+    color: #595959;
 }
 
 

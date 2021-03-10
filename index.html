@@ -13,36 +13,68 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="mainFrame">
-        <!--Header-->
-        <header class="pageHeader">
-            <a href="#"><img src="images/logo/Reservia.svg" class="pageHeader__logo" alt="Reservia logo"/></a>
+    <!--Header-->
+    <header class="pageHeader">
+        <a href="#"><img src="images/logo/Reservia.svg" class="pageHeader__logo" alt="Reservia logo"/></a>
 
-            <!--Buttons (hosts, activities and signup buttons)-->
-            <div class="pageHeader__buttonGroup">
-                <nav class="buttonGroup__navButtons">
-                    <a href="#hébergements" class="navButtons__sectionButton navButtons__sectionButton--blue ralewayThin">Hébergements</a>
-                    <a href="#activités" class="navButtons__sectionButton navButtons__sectionButton--black ralewayThin">Activités</a>
-                </nav>
-                    <a href="#" class="buttonGroup__signupButton ralewayThin">S'inscrire</a>
+        <!--Buttons (hosts, activities and signup buttons)-->
+        <div class="pageHeader__buttonGroup">
+            <nav class="buttonGroup__navButtons">
+                <a href="#hébergements" class="navButtons__sectionButton navButtons__sectionButton--blue ralewayThin">Hébergements</a>
+                <a href="#activités" class="navButtons__sectionButton navButtons__sectionButton--black ralewayThin">Activités</a>
+            </nav>
+                <a href="#" class="buttonGroup__signupButton ralewayThin">S'inscrire</a>
+        </div>
+    </header>
+
+    <!--Main div (contains hosts and activities sections)-->
+    <main>
+        <!--Introduction title-->
+        <p>
+            <h1 class="ralewayBold">Trouvez votre hébergement pour des vacances de rêve</h1>
+            <span class="ralewayThin">En plein centre ville ou en pleine nature</span>
+        </p>
+
+        <!--Searchbar and search filters-->
+        <div class="mainFrame__searchBar">
+            <img src="images/fontawesome-free-5.15.2-web/svgs/map-marker-alt.svg" class="searchBar__icon" alt="Map marker"/>
+            <input type="search" class="searchBar__input"/>
+            <button class="searchBar__button">Rechercher</button> 
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer__information">
+            <!--About-->
+            <div class="information__category">
+                <h2 class="ralewayBold" style="font-size: large;">A propos</h2>
+                <ul class="category__linkList">
+                    <li><a class="linkList__link"href="#">Fonctionnement du site</a></li>
+                    <li><a class="linkList__link"href="#">Conditions générales de vente</a></li>
+                    <li><a class="linkList__link"href="#">Données et confidentialité</a></li>
+                </ul>
             </div>
-        </header>
 
-        <!--Main div (contains hosts and activities sections)-->
-        <main>
-            <!--Introduction title-->
-            <p>
-                <h1 class="ralewayBold">Trouvez votre hébergement pour des vacances de rêve</h1>
-                <span class="ralewayThin">En plein centre ville ou en pleine nature</span>
-            </p>
-
-            <!--Searchbar and search filters-->
-            <div class="mainFrame__searchBar">
-                <img src="images/fontawesome-free-5.15.2-web/svgs/map-marker-alt.svg" class="searchBar__icon" alt="Map marker"/>
-                <input type="search" class="searchBar__input"/>
-                <button class="searchBar__button">Rechercher</button> 
+            <!--Our hosts-->
+            <div class="information__category">
+                <h2 class="ralewayBold" style="font-size: large;">Nos Hébergements</h2>
+                <ul class="category__linkList">
+                    <li><a class="linkList__link" href="#">Charte qualité</a></li>
+                    <li><a class="linkList__link" href="#">Soumettre votre hôtel</a></li>
+                </ul>
             </div>
-        </main>
-    </div>
+
+            <!--Assistance-->
+            <div class="information__category">
+                <h2 class="ralewayBold" style="font-size: large;">Assistance</h2>
+                <ul class="category__linkList">
+                    <li><a class="linkList__link" href="#">Centre d'aide</a></li>
+                    <li><a class="linkList__link" href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
