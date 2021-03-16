@@ -11,16 +11,19 @@ body {
 h1 {
     font-size: x-large;
     font-weight: 700;
+    width: fit-content;
 }
 
 h2 {
     font-size: larger;
     font-weight: 700;
+    width: fit-content;
 }
 
 h3 {
     font-size: large;
     font-weight: 700;
+    width: fit-content;
 }
 
 
@@ -71,8 +74,11 @@ nav > a {
 /* Main */
 main {
     flex-grow: 1;
-    margin: 0 3.5% 0 3.5%;
     padding-bottom: 62px;
+}
+
+.searchSection {
+    margin: 0 3.5% 0 3.5%;
 }
 
 .introduction_title {
@@ -109,6 +115,7 @@ main {
     border: none;
     margin-top: 1px;
     outline: none;
+    border-radius: 0;
 
     font-weight: 700;
     font-size: larger;
@@ -620,14 +627,10 @@ footer > div > p > a:hover { color: #595959; }
 
     .hosts {
         background-color: white;
-        margin-left: -3.5vw;
-        width: 100vw;
         border-radius:unset;
     }
 
     .mostPopular {
-        margin-left: -3.5vw;
-        width: 100vw;
         border-radius:unset;
     }
 

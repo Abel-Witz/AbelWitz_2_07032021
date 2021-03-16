@@ -29,61 +29,63 @@
 
     <!--Main div (contains hosts and activities sections)-->
     <main>
-        <!--Introduction title-->
-        <h1 class="introduction_title">Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p class="introduction">En plein centre ville ou en pleine nature</p>
+        <section class="searchSection">
+            <!--Introduction title-->
+            <h1 class="introduction_title">Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p class="introduction">En plein centre ville ou en pleine nature</p>
 
-        <!--Searchbar-->
-        <div class="searchBar">
-            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/map-marker-alt.svg" class="searchBar_icon" alt="Map marker"/>
-            <input type="search" class="searchBar_input"/>
-            <button class="searchBar_button">
-                <span class="searchBar_searchText">Rechercher</span>
-                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/search.svg" class="searchBar_searchIcon" alt="Map marker"/>
-            </button> 
-        </div>
+            <!--Searchbar-->
+            <div class="searchBar">
+                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/map-marker-alt.svg" class="searchBar_icon" alt="Map marker"/>
+                <input type="search" class="searchBar_input"/>
+                <button class="searchBar_button">
+                    <span class="searchBar_searchText">Rechercher</span>
+                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/search.svg" class="searchBar_searchIcon" alt="Map marker"/>
+                </button> 
+            </div>
 
-        <!--Filters-->
-        <h3 class="searchFilters_title">Filtres</h3>
-        <div class="searchFilters">
+            <!--Filters-->
+            <h3 class="searchFilters_title">Filtres</h3>
+            <div class="searchFilters">
 
-            <div class="filterSwitch">
-                <div class="filterSwitch_iconFrame">
-                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/money-bill-wave.svg" id="costIcon" alt="Money bill wave"/>
+                <div class="filterSwitch">
+                    <div class="filterSwitch_iconFrame">
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/money-bill-wave.svg" id="costIcon" alt="Money bill wave"/>
+                    </div>
+                    <span class="filterSwitch_title">Économique</span>
                 </div>
-                <span class="filterSwitch_title">Économique</span>
-            </div>
 
-            <div class="filterSwitch">
-                <div class="filterSwitch_iconFrame">
-                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/child.svg" id="costIcon" alt="Child"/>
+                <div class="filterSwitch">
+                    <div class="filterSwitch_iconFrame">
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/child.svg" id="costIcon" alt="Child"/>
+                    </div>
+                    <span class="filterSwitch_title">Familial</span>
                 </div>
-                <span class="filterSwitch_title">Familial</span>
-            </div>
 
-            <div class="filterSwitch">
-                <div class="filterSwitch_iconFrame">
-                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/heart.svg" id="costIcon" alt="Heart"/>
+                <div class="filterSwitch">
+                    <div class="filterSwitch_iconFrame">
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/heart.svg" id="costIcon" alt="Heart"/>
+                    </div>
+                    <span class="filterSwitch_title">Romantique</span>
                 </div>
-                <span class="filterSwitch_title">Romantique</span>
-            </div>
 
-            <div class="filterSwitch">
-                <div class="filterSwitch_iconFrame">
-                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/dog.svg" id="costIcon" alt="Dog"/>
+                <div class="filterSwitch">
+                    <div class="filterSwitch_iconFrame">
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/dog.svg" id="costIcon" alt="Dog"/>
+                    </div>
+                    <span class="filterSwitch_title">Animaux autorisés</span>
                 </div>
-                <span class="filterSwitch_title">Animaux autorisés</span>
             </div>
-        </div>
 
-        <div class="info">
-            <br><div class="infoCircle">
-                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/info.svg" class="infoCircle_icon" alt="Info">
+            <div class="info">
+                <br><div class="infoCircle">
+                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/info.svg" class="infoCircle_icon" alt="Info">
+                </div>
+                <p class="infoText">
+                    Plus de 500 logements sont disponibles dans cette ville
+                </p>
             </div>
-            <p class="infoText">
-                Plus de 500 logements sont disponibles dans cette ville
-            </p>
-        </div>
+        </section>
             
         <!--Search filters-->
         <div class="hosts_and_activities">
