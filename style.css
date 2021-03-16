@@ -94,7 +94,8 @@ main {
     display: flex;
     background-color: #F2F2F2;
     /*width: 420px;*/
-    max-width: 100px;
+    width: 93vw;
+    max-width: 336px;
     height: 51px;
     border-radius: 10px;
     margin-bottom: 31px;
@@ -115,7 +116,6 @@ main {
     border: none;
     margin-top: 1px;
     outline: none;
-    border-radius: 0;
 
     font-weight: 700;
     font-size: larger;
