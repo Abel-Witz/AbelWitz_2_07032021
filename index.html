@@ -27,13 +27,14 @@
         </div>
     </header>
 
-    <!--Main div (contains hosts and activities sections)-->
+    <!--Main (contains hosts and activities sections)-->
     <main>
-        <section class="searchSection">
-            <!--Introduction title-->
-            <h1 class="introduction_title">Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p class="introduction">En plein centre ville ou en pleine nature</p>
+        <!--Introduction title-->
+        <h1 class="introduction_title">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p class="introduction">En plein centre ville ou en pleine nature</p>
 
+        <!--Search section-->
+        <section class="searchSection">
             <!--Searchbar-->
             <div class="searchBar">
                 <img src="images/fontawesome-free-5.15.2-web/svgs/solid/map-marker-alt.svg" class="searchBar_icon" alt="Map marker"/>
@@ -44,201 +45,219 @@
                 </button> 
             </div>
 
-            <!--Filters-->
+            <!--Search filters-->
             <h3 class="searchFilters_title">Filtres</h3>
+
             <div class="searchFilters">
-
                 <div class="filterSwitch">
                     <div class="filterSwitch_iconFrame">
-                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/money-bill-wave.svg" id="costIcon" alt="Money bill wave"/>
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/money-bill-wave.svg" class="filterSwitch_icon" alt="Money bill wave"/>
                     </div>
-                    <span class="filterSwitch_title">Économique</span>
-                </div>
-
-                <div class="filterSwitch">
-                    <div class="filterSwitch_iconFrame">
-                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/child.svg" id="costIcon" alt="Child"/>
-                    </div>
-                    <span class="filterSwitch_title">Familial</span>
+                    <h4 class="filterSwitch_title">Économique</h4>
                 </div>
 
                 <div class="filterSwitch">
                     <div class="filterSwitch_iconFrame">
-                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/heart.svg" id="costIcon" alt="Heart"/>
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/child.svg" class="filterSwitch_icon" alt="Child"/>
                     </div>
-                    <span class="filterSwitch_title">Romantique</span>
+                    <h4 class="filterSwitch_title">Familial</h4>
                 </div>
 
                 <div class="filterSwitch">
                     <div class="filterSwitch_iconFrame">
-                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/dog.svg" id="costIcon" alt="Dog"/>
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/heart.svg" class="filterSwitch_icon" alt="Heart"/>
                     </div>
-                    <span class="filterSwitch_title">Animaux autorisés</span>
+                    <h4 class="filterSwitch_title">Romantique</h4>
                 </div>
-            </div>
 
-            <div class="info">
-                <br><div class="infoCircle">
-                    <img src="images/fontawesome-free-5.15.2-web/svgs/solid/info.svg" class="infoCircle_icon" alt="Info">
+                <div class="filterSwitch">
+                    <div class="filterSwitch_iconFrame">
+                        <img src="images/fontawesome-free-5.15.2-web/svgs/solid/dog.svg" class="filterSwitch_icon" alt="Dog"/>
+                    </div>
+                    <h4 class="filterSwitch_title">Animaux autorisés</h4>
                 </div>
-                <p class="infoText">
-                    Plus de 500 logements sont disponibles dans cette ville
-                </p>
             </div>
         </section>
+
+        <div class="resultText">
+            <div class="resultText_iconFrame">
+                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/info.svg" class="resultText_icon" alt="Info">
+            </div>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
             
-        <!--Search filters-->
-        <div class="hosts_and_activities">
-            <section class="hosts">
-                <h2 id="hosts_title">Hébergements à Marseille</h2>
+        <!--Hosts-->
+        <div id="hostResult_and_popularHosts">
+            <!-- Host result -->
+            <section class="hostSection hostResult">
+                <h2 class="hostSection_title">Hébergements à Marseille</h2>
+                
+                <div class="hostSection_tiles hostResult_tiles">
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="aubergeLaCannebiere"></div>
 
-                <div class="hostTiles">
-                    <div class="tile">
-                        <div class="tile_image" id="aubergeLaCannebiere"></div>
+                        <h4 class="tileTitle">Auberge la Cannebière</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de </span><b>25€</b>
+                        </div>
 
-                        <span class="tileTitle">Auberge la Cannebière</span><br>
-                        <span class="tilePrice">Nuit à partir de </span><span class="tilePriceBold">25€</span>
-
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                         </div>
                     </div>
 
-                    <div class="tile">
-                        <div class="tile_image" id="hotelDuPort"></div>
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="hotelDuPort"></div>
                         
-                        <span class="tileTitle">Hôtel du port</span><br>
-                        <span class="tilePrice">Nuit à partir de 52</span><span class="tilePriceBold">€</span>
+                        <h4 class="tileTitle">Hôtel du port</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de 52</span><b>€</b>
+                        </div>
 
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
                         </div>
                     </div>
 
-                    <div class="tile">
-                        <div class="tile_image" id="hotelLesMouettes"></div>
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="hotelLesMouettes"></div>
                         
-                        <span class="tileTitle">Hôtel Les mouettes</span><br>
-                        <span class="tilePrice">Nuit à partir de 76</span><span class="tilePriceBold">€</span>
+                        <h4 class="tileTitle">Hôtel Les mouettes</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de 76</span><b>€</b>
+                        </div>
 
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                         </div>
                     </div>
 
-                    <div class="tile">
-                        <div class="tile_image" id="hotelDeLaMer"></div>
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="hotelDeLaMer"></div>
                         
-                        <span class="tileTitle">Hôtel de la mer</span><br>
-                        <span class="tilePrice">Nuit à partir de 46</span><span class="tilePriceBold">€</span>
+                        <h4 class="tileTitle">Hôtel de la mer</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de 46</span><b>€</b>
+                        </div>
 
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                         </div>
                     </div>
 
-                    <div class="tile">
-                        <div class="tile_image" id="aubergeLePanier"></div>
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="aubergeLePanier"></div>
                         
-                        <span class="tileTitle">Auberge Le Panier</span><br>
-                        <span class="tilePrice">Nuit à partir de </span><span class="tilePriceBold">23€</span>
+                        <h4 class="tileTitle">Auberge Le Panier</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de </span><b>23€</b>
+                        </div>
 
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                         </div>
                     </div>
 
-                    <div class="tile">
-                        <div class="tile_image" id="hotelChezAmina"></div>
+                    <div class="hostResult_tile">
+                        <div class="divImage hostResult_tileImage" id="hotelChezAmina"></div>
                         
-                        <span class="tileTitle">Hôtel chez Amina</span><br>
-                        <span class="tilePrice">Nuit à partir de 96</span><span class="tilePriceBold">€</span>
+                        <h4 class="tileTitle">Hôtel chez Amina</h4><br>
+                        <div class="tilePrice">
+                            <span>Nuit à partir de 96</span><b>€</b>
+                        </div>
 
-                        <div class="tileStars">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
+                        <div class="tileRating">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                            <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
                         </div>
                     </div>
                 </div>
 
-                <h3 id="hosts_seeMore"><a href="#">Afficher plus</a></h3>
+                <h3 class="hostResult_seeMore"><a href="#">Afficher plus</a></h3>
             </section>
 
-            <section class="mostPopular">
-                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/chart-line.svg" class="popular_chartLine" alt="Chart line">
-                <h2 id="hosts_title">Les plus populaires</h2>
+            <!-- Most popular hosts -->
+            <section class="hostSection popularHosts">
+                <h2 class="hostSection_title">Les plus populaires</h2>
+                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/chart-line.svg" class="popularHosts_chartLine" alt="Chart line">
 
-                <div class="mostPopularTiles">
-                    <div class="popularTile">
-                        <div class="popularTile_image" id="hotelLeSoleilDuMatin"></div>
+                <div class="hostSection_tiles popularHosts_tiles">
+                    <div class="popularHosts_tile">
+                        <div class="divImage popularHosts_tileImage" id="hotelLeSoleilDuMatin"></div>
 
                         <div class="popularTileInfo">
-                            <span class="tileTitle">Hôtel Le soleil du matin</span><br>
-                            <span class="tilePrice">Nuit à partir de </span><span class="tilePriceBold">128€</span>
+                            <h4 class="tileTitle">Hôtel Le soleil du matin</h4><br>
+                            <div class="tilePrice">
+                                <span>Nuit à partir de </span><b>128€</b>
+                            </div>
 
-                            <div class="tileStars">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
+                            <div class="tileRating">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
                             </div>
                         </div>
                     </div>
 
-                    <div class="popularTile">
-                        <div class="popularTile_image" id="auCoeurDeLeauChambresDhotes"></div>
+                    <div class="popularHosts_tile">
+                        <div class="divImage popularHosts_tileImage" id="auCoeurDeLeauChambresDhotes"></div>
 
                         <div class="popularTileInfo">
-                            <span class="tileTitle">Au cœur de l'eau Chambres d'hôtes</span><br>
-                            <span class="tilePrice">Nuit à partir de </span><span class="tilePriceBold">71€</span>
+                            <h4 class="tileTitle">Au cœur de l'eau Chambres d'hôtes</h4><br>
+                            <div class="tilePrice">
+                                <span>Nuit à partir de </span><b>71€</b>
+                            </div>
 
-                            <div class="tileStars">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                            <div class="tileRating">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                             </div>
                         </div>
                     </div>
 
-                    <div class="popularTile">
-                        <div class="popularTile_image" id="hotelToutBleuEtBlanc"></div>
+                    <div class="popularHosts_tile">
+                        <div class="divImage popularHosts_tileImage" id="hotelToutBleuEtBlanc"></div>
 
                         <div class="popularTileInfo">
-                            <span class="tileTitle">Hôtel Tout bleu et Blanc</span><br>
-                            <span class="tilePrice">Nuit à partir de </span><span class="tilePriceBold">68€</span>
+                            <h4 class="tileTitle">Hôtel Tout bleu et Blanc</h4><br>
+                            <div class="tilePrice">
+                                <span>Nuit à partir de </span><b>68€</b>
+                            </div>
 
-                            <div class="tileStars">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_fullStar" alt="Star">
-                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="tile_emptyStar" alt="Star">
+                            <div class="tileRating">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="fullStar" alt="Star">
+                                <img src="images/fontawesome-free-5.15.2-web/svgs/solid/star.svg" class="emptyStar" alt="Star">
                             </div>
                         </div>
                     </div>
@@ -248,43 +267,46 @@
             </section>
         </div>
 
-        <section class="activitiesSection">
+        <!-- Activities -->
+        <section class="activitySection">
             <h2>Activités à Marseille</h2>
 
-            <div class="activities">
+            <div class="activityTiles">
                 <div class="activityTile">
-                    <div class="activityTileImage" id="vieuxPort"></div>
-                    <p class="activityTitle">Vieux Port</p>
+                    <div class="divImage activityTileImage" id="vieuxPort"></div>
+                    <h4 class="activityTitle">Vieux Port</h4>
                 </div>
                 <div class="activityTile">
-                    <div class="activityTileImage" id="fortDePomegues"></div>
-                    <p class="activityTitle">Fort de Pomègues</p>
+                    <div class="divImage activityTileImage" id="fortDePomegues"></div>
+                    <h4 class="activityTitle">Fort de Pomègues</h4>
                 </div>
                 <div class="activityTile">
-                    <div class="activityTileImage" id="ilesDuFrioul"></div>
-                    <p class="activityTitle">Îles du Frioul</p>
+                    <div class="divImage activityTileImage" id="ilesDuFrioul"></div>
+                    <h4 class="activityTitle">Îles du Frioul</h4>
                 </div>
                 <div class="activityTile">
-                    <div class="activityTileImage" id="parcNationalDesCalanques"></div>
-                    <p class="activityTitle">Parc National des Calanques</p>
+                    <div class="divImage activityTileImage" id="parcNationalDesCalanques"></div>
+                    <h4 class="activityTitle">Parc National des Calanques</h4>
                 </div>
                 <div class="activityTile">
-                    <div class="activityTileImage" id="notreDameDeLaGarde"></div>
-                    <p class="activityTitle">Notre-Dame-de-la-Garde</p>
+                    <div class="divImage activityTileImage" id="notreDameDeLaGarde"></div>
+                    <h4 class="activityTitle">Notre-Dame-de-la-Garde</h4>
                 </div>
                 <div class="activityTile">
-                    <div class="activityTileImage" id="parcLongchamp"></div>
-                    <p class="activityTitle">Parc Longchamp</p>
+                    <div class="divImage activityTileImage" id="parcLongchamp"></div>
+                    <h4 class="activityTitle">Parc Longchamp</h4>
                 </div>
             </div>
         </section>
         
     </main>
 
+    <!-- Footer -->
     <footer>
         <!--About-->
         <div>
             <h3>A propos</h3>
+
             <p><a href="#">Fonctionnement du site</a></p>
             <p><a href="#">Conditions générales de vente</a></p>
             <p><a href="#">Données et confidentialité</a></p>
@@ -293,6 +315,7 @@
         <!--Our hosts-->
         <div>
             <h3>Nos Hébergements</h3>
+
             <p><a href="#">Charte qualité</a></p>
             <p><a href="#">Soumettre votre hôtel</a></p>
         </div>
@@ -300,6 +323,7 @@
         <!--Assistance-->
         <div>
             <h3>Assistance</h3>
+
             <p><a href="#">Centre d'aide</a></p>
             <p><a href="#">Nous contacter</a></p>
         </div>

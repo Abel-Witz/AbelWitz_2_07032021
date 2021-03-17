@@ -1,33 +1,72 @@
-/* Main elements */
+/************************/
+/*** Common elements ***/
+/**********************/
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
     min-height: 100vh;
     margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+    display: inline-block;
+    margin: 0;
+
+    font-weight: 700;
 }
 
 h1 {
     font-size: x-large;
-    font-weight: 700;
-    width: fit-content;
 }
 
 h2 {
     font-size: larger;
-    font-weight: 700;
-    width: fit-content;
 }
 
 h3 {
     font-size: large;
+}
+
+h4 {
+    font-size: medium;
+}
+
+span p a {
+    font-weight: 500;
+}
+
+b {
     font-weight: 700;
-    width: fit-content;
 }
 
 
-/* Header */
+.divImage {
+    background-size: cover;
+    background-position: center;
+}
+
+.fullStar {
+    width: 12px;
+    height: 12px;
+
+    filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
+}
+
+.emptyStar {
+    width: 12px;
+    height: 12px;
+
+    filter: invert(100%) sepia(0%) saturate(1095%) hue-rotate(28deg) brightness(85%) contrast(98%);
+}
+
+
+
+/***************/
+/*** Header ***/
+/*************/
 header {
     display: flex;
     justify-content: space-between;
@@ -48,6 +87,8 @@ header {
     right: 3.5%;
 }
 
+
+/* Nav buttons */
 nav {
     display: flex;  
 }
@@ -57,80 +98,94 @@ nav > a {
     text-decoration: none;
 }
 
-[href="#hébergements"] { color: #0065fc; }
-[href="#activités"] { color:  black; }
-
-.signupButton {
+[href="#hébergements"] { 
     color: #0065fc;
-    font-weight: 700;
-    text-decoration: none;
-    position: relative;
-    right: 3.5%;
 }
 
-.signupButton:hover { filter: brightness(75%); }
+[href="#activités"] {
+    color:  black;
+}
 
 
-/* Main */
+/* Signup button */
+.signupButton {
+    position: relative;
+    right: 3.5%;
+
+    font-weight: 700;
+    text-decoration: none;
+    color: #0065fc;
+}
+
+.signupButton:hover {
+    filter: brightness(75%);
+}
+
+
+
+/*************/
+/*** Main ***/
+/***********/
 main {
     flex-grow: 1;
     padding-bottom: 62px;
 }
 
+/* Introduction */
+.introduction_title {
+    margin: 0px auto 0.4em 3.5%;
+}
+
+.introduction {
+    margin: 0 0 0 3.5%;
+}
+
+
+/* Search section */
 .searchSection {
     margin: 0 3.5% 0 3.5%;
 }
 
-.introduction_title {
-    margin-top: 0px;
-    margin-bottom: 0.4em;
-}
-
-.introduction {
-    margin-block-start: 0;
-}
-
-.searchBar {
+.searchBar { /* Search bar */
     display: flex;
-    background-color: #F2F2F2;
-    /*width: 420px;*/
-    width: 93vw;
+    width: 93vw; /*width: 420px;*/
     max-width: 336px;
     height: 51px;
-    border-radius: 10px;
     margin-bottom: 31px;
+
+    background-color: #F2F2F2;
+    border-radius: 10px;
 }
 
 .searchBar_icon {
-    height: 18px;
     width: 13px;
-    margin-top: 17px;
-    margin-left: 19px;
+    height: 18px;
+    margin: 17px auto auto 19px;
     padding-right: 21px;
 }
 
 .searchBar_input {
-    height: 49px;
     width: calc(93vw - 102px);
     max-width: 234px;
-    border: none;
+    height: 49px;
     margin-top: 1px;
-    outline: none;
 
     font-weight: 700;
     font-size: larger;
+    border: none;
+    outline: none;
 }
 
 .searchBar_button {
+    width: 134px;
+    height: 51px;
+
+    border-radius: 0px 10px 10px 0px;
     background-color: #0065FC;
+    font-size: larger;
+    color: white;
     border: none;
     outline: none;
-    border-radius: 0px 10px 10px 0px;
-    height: 51px;
-    width: 134px;
-
-    color: white;
-    font-size: larger;
 }
 
 .searchBar_button:hover {
@@ -142,10 +197,19 @@ main {
     border: none;
 }
 
-.searchFilters_title {
+.searchBar_searchIcon {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 2px;
+    
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(108%) contrast(109%);
+}
+
+
+.searchFilters_title { /* Search filters */
     display: inline;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto 0 auto;
 }
 
 .searchFilters {
@@ -157,80 +221,170 @@ main {
 .filterSwitch {
     display: flex;
     align-items: center;
-    border-radius: 22px 22px 22px 22px;
-    border: 2px solid #d9d9d9;
     width: fit-content;
     height: 46px;
     margin-left: 24px;
+
+    border-radius: 22px 22px 22px 22px;
+    border: 2px solid #d9d9d9;
 }
 
 .filterSwitch_iconFrame {
-    margin-left: -4px;
     width: 50px;
     height: 50px;
+    margin-left: -4px;
+
     border-radius: 25px 25px 25px 25px;
     background-color:#DEEBFF;
 }
 
-.filterSwitch_title {
-    padding: 0px 13px 0px 13px;
-    font-weight: 700;
-}
-
-#costIcon {
+.filterSwitch_icon {
     width: 18px;
     height: 17px;
-    margin-left: 16px;
-    margin-top: 17px;
+    margin: 17px auto auto 16px;
+
     filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
 }
 
-.info {
-    margin-top: 40px;
-    margin-bottom: 40px;
+.filterSwitch h4 {
+    padding: 0px 13px 0px 13px;
 }
 
-.infoCircle {
-    position: absolute;
+
+/* Result text */
+.resultText {
+    margin: 40px auto 40px 3.5%;
+}
+
+.resultText_iconFrame {
     width: 22px;
     height: 22px;
+    position: absolute;
+
     border-radius: 11px 11px 11px 11px;
     border: 1px solid #d9d9d9;
 }
 
-.infoCircle_icon {
+.resultText_icon {
     width: 4px;
     height: 12px;
+    margin: 5px auto auto 9px;
+
     filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
-    margin-top: 5px;
-    margin-left: 9px;
 }
 
-.infoText {
-    margin-left: calc(22px + 12px);
+.resultText p {
     display: inline-block;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin: 0px auto 0px calc(22px + 12px);
 }
 
-.hosts_and_activities {
+
+/* Host sections */
+#hostResult_and_popularHosts {
     display: flex;
     flex-wrap: wrap;
+    margin: auto 3.5% auto 3.5%;
 }
 
-.hosts {
-    border-radius: 16px 16px 16px 16px;
-    background-color: #f2f2f2;
-    padding-bottom: 66px;
-}
-
-.mostPopular {
+.hostSection {
     position: relative;
+
     border-radius: 16px 16px 16px 16px;
     background-color: #f2f2f2;
 }
 
-.popular_chartLine {
+.hostSection_title {
+    position: relative;
+    top: 47px;
+    left: 40px;
+}
+
+.hostSection_tiles {
+    display: grid;
+    margin-top: 38px;
+    padding: 20px;
+}
+
+.tileTitle {
+    margin-left: 10px;
+}
+
+.tilePrice {
+    margin-left: 10px;
+    font-size: small;
+}
+
+.tileRating {
+    margin-left: 10px;
+}
+
+
+/* Hosts from search result section */
+.hostResult_tile {
+    width: fit-content;
+    height: fit-content;
+    margin: 15.5px;
+    padding: 5px;
+
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 16px gray;
+    background-color: white;
+}
+
+.hostResult_tileImage {
+    width: 212.4px;/*236px;*/
+    height: 102.6px;/*114px;*/
+    margin-bottom: 12px;
+
+    border-radius: 10px 10px 0px 0px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hostResult_seeMore {
+    margin-bottom: 66px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+.hostResult_seeMore > a {
+    color: black;
+    text-decoration: none;
+}
+
+.hostResult_seeMore > a:hover {
+    color: #595959;
+}
+
+/* Host images from search result */
+#aubergeLaCannebiere {
+    background-image: url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+}
+
+#hotelDuPort {
+    background-image: url("images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+}
+
+#hotelLesMouettes {
+    background-image: url("images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+}
+
+#hotelDeLaMer {
+    background-image: url("images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+
+#aubergeLePanier {
+    background-image: url("images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+}
+
+#hotelChezAmina {
+    background-image: url("images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+}
+
+
+/* Popular hosts section */
+.popularHosts_chartLine {
     width: 22px;
     height: 18px;
     position: absolute;
@@ -238,164 +392,87 @@ main {
     right: 32px;
 }
 
-.mostPopularTiles {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 38px;
-    padding: 20px;
-}
-
-.hostTiles {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 38px;
-    padding: 20px;
-}
-
-#hosts_title {
-    position: relative;
-    top: 47px;
-    left: 40px;
-}
-
-#hosts_seeMore {
-    position: relative;
-    top: 10px;
-    left: 40px;
-}
-
-#hosts_seeMore > a {
-    text-decoration: none;
-    color: black;
-}
-
-#hosts_seeMore > a:hover {
-    color: #595959;
-}
-
-.popularTile {
-    /*width: min-content; TODO*/
-    background-color: white;
-    border-radius: 15px 15px 15px 15px;
-    padding: 5px;
-    box-shadow: 0px 0px 16px gray;
-    margin: 15.5px;
-    height: 120.6px;
+.popularHosts_tile {
     display: flex;
     max-width: 253px;
+    height: 120.6px;
+    margin: 15.5px;
+    padding: 5px;
+
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 16px gray;
+    background-color: white;
 }
 
-.tile {
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    border-radius: 15px 15px 15px 15px;
-    padding: 5px;
-    box-shadow: 0px 0px 16px gray;
-    margin: 15.5px;
+.popularHosts_tileImage {
+    display: inline-block;
+    min-width: 74.3px; /*127px;*/
+    height: 120.6px;/*134px;*/
+
+    border-radius: 10px 0px 0px 10px;
+    background-position: center;
+    background-size: cover;
 }
 
 .popularTileInfo {
     margin-right: 33.6px;
-}
-
-.tileTitle {
-    font-size: medium;
-    font-weight: 700;
     position: relative;
-    left: 10px;
 }
 
-.tilePrice {
-    font-size: small;
-    position: relative;
-    left: 10px;
+.popularTileInfo .tileRating {
+    position: absolute;
+    bottom: 0;
 }
 
-.tilePriceBold {
-    font-size: small;
-    font-weight: 700;
-    position: relative;
-    left: 10px;
+/* Popular hosts images */
+#hotelLeSoleilDuMatin {
+    background-image: url("images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
 }
 
-.tile_fullStar {
-    width: 12px;
-    height: 12px;
-    filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
-    position: relative;
-    left: 10px;
+#auCoeurDeLeauChambresDhotes {
+    background-image: url("images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
 }
 
-.tile_emptyStar {
-    width: 12px;
-    height: 12px;
-    filter: invert(100%) sepia(0%) saturate(1095%) hue-rotate(28deg) brightness(85%) contrast(98%);
-    position: relative;
-    left: 10px;
+#hotelToutBleuEtBlanc {
+    background-image: url("images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
 }
 
-.tile_image {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 12px;
-    width: 212.4px;/*236px;*/
-    height: 102.6px;/*114px;*/
+
+/* Activities section */
+.activitySection {
+    margin: 47px 3.5% auto 3.5%;
 }
 
-.popularTile_image {
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 0px 0px 10px;
-    margin-bottom: 12px;
-    min-width: 74.3px; /*127px;*/
-    height: 120.6px;/*134px;*/
-
-}
-
-/* Activities */
-.activitiesSection {
-    margin-top: 47px;
-}
-
-.activities {
+.activityTiles {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 445px;
     max-width: 1230px;
-    margin-left: -20px;
-    margin-right: -20px;
+    height: 445px;
+    margin: auto -20px auto -20px;
 }
 
 .activityTile {
+    width: calc((93% - (3 * 40px)) / 4);
+    margin: auto 20px auto 20px;
+    padding-bottom: 36px;
+
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 0px 16px gray;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-bottom: 36px;
-    width: calc((93% - (3 * 40px)) / 4);
 }
 
 .activityTileImage {
     border-radius: 15px 15px 0px 0px;
-    background-size: cover;
-    background-position: center;
 }
 
 .activityTitle {
-    font-size: medium;
-    font-weight: 700;
-    margin-left: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto 0 20px;
     position: relative;
     top: 20px;
 }
 
+/* Activity images */
 #vieuxPort {
     background-image: url("images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
     height: 390px;
@@ -427,55 +504,17 @@ main {
 }
 
 
-
-#aubergeLaCannebiere {
-    background-image: url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-}
-
-#hotelDuPort {
-    background-image: url("images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-}
-
-#hotelLesMouettes {
-    background-image: url("images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-}
-
-#hotelDeLaMer {
-    background-image: url("images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-}
-
-#aubergeLePanier {
-    background-image: url("images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-}
-
-#hotelChezAmina {
-    background-image: url("images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-}
-
-
-/* Popular */
-#hotelLeSoleilDuMatin {
-    background-image: url("images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-}
-
-#auCoeurDeLeauChambresDhotes {
-    background-image: url("images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
-}
-
-#hotelToutBleuEtBlanc {
-    background-image: url("images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-}
-
-/* Footer */
+/***************/
+/*** Footer ***/
+/*************/
 footer {
-    background-color: #F2F2F2;
     display: flex;
-    padding-top: 49px;
-    padding-bottom: 55px;
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    padding: 49px 3.5% 55px 3.5%;
+
+    background-color: #F2F2F2;
 }
 
+/* Footer info sections (about, our hosts or assistance) */
 footer > div {
     flex-grow: 1;
     width: 0%;
@@ -486,33 +525,58 @@ footer > div > p > a {
     color: black;
 }
 
-footer > div > p > a:hover { color: #595959; }
-
-
-.searchBar_searchIcon {
-    width: 17px;
-    height: 17px;
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(108%) contrast(109%);
+footer > div > p > a:hover {
+    color: #595959;
 }
 
-/* Large screens */
+
+
+
+/*////////////////////*/
+/*// LARGE SCREENS //*/
+/*//////////////////*/
+
 @media only screen and (min-width: 801px) {
-    /* Header */
+    /***************/
+    /*** Header ***/
+    /*************/
     .reserviaLogo {
         margin-top: 52px;
     }
 
-    nav > a { padding: 45px 32.5px 0px 32.5px; }
+    /* Nav buttons */
+    nav > a {
+        padding: 45px 32.5px 0px 32.5px;
+    }
 
     nav > a:hover {
         padding-top: 43px;
+
         border-top: 2px solid #0065fc;
     }
 
+    .always_active {
+        padding-top: 43px;
+
+        border-top: 2px solid #0065fc;
+    }
+
+
+    /* Signup button */
+    .signupButton {
+        margin-left: 32.5px;
+    }
+
+
+
+    /*************/
+    /*** Main ***/
+    /***********/
     main {
         margin-top: 72px;
     }
 
+    /* Introduction */
     .introduction_title {
         margin-bottom: 0.4em;
     }
@@ -521,79 +585,87 @@ footer > div > p > a:hover { color: #595959; }
         margin-block-end: 1.5em;
     }
 
-    .mostPopular {
-        margin-left: 40px;
-    }
 
-    .always_active {
-        padding-top: 43px;
-        border-top: 2px solid #0065fc;
-    }
-
-    .searchBar_searchIcon {
+    /* Search section */
+    .searchBar_searchIcon { /* Search bar */
         display: none;
     }
 
-    .searchFilters {
-        margin-top: 0;
+
+    .searchFilters { /* Search filters */
         display: inline-flex;
+        margin-top: 0;
     }
+    
 
-    .signupButton { margin-left: 32.5px; }
-}
-
-/* Medium screens */
-@media only screen and (min-width: 801px) and (max-width: 1262px) {
-    /* Header */
-    .mostPopularTiles {
+    /* Host sections */
+    .hostResult_tiles { /* Hosts from search result section */
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .mostPopular {
-        margin-left: 0px;
-        max-width: 800px;
-        margin-top: 40px;
+    /* Popular hosts section */
+    .popularHosts {
+        margin-left: 40px;
     }
 
-    .activities {
+    .popularHosts_tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/*/////////////////////*/
+/*// MEDIUM SCREENS //*/
+/*///////////////////*/
+
+@media only screen and (min-width: 801px) and (max-width: 1262px) {
+    /*************/
+    /*** Main ***/
+    /***********/
+
+    /* Host sections */
+    .popularHosts { /* Popular hosts section */
+        max-width: 800px;
+        margin: 40px auto auto 0px;
+    }
+
+    .popularHosts_tiles {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    /* Activities section */
+    .activityTiles {
         max-width: 840px;
     }
 }
 
 
-/* Small screens */
+
+
+/*////////////////////*/
+/*// SMALL SCREENS //*/
+/*//////////////////*/
+
 @media only screen and (max-width: 800px) {
-    /* Header */
+    /***************/
+    /*** Header ***/
+    /*************/
     .reserviaLogo {
         margin-top: 32px;
     }
 
     .headerButtons {
         flex-direction: column-reverse;
-        margin-top: 45px;
         width: 100%;
+        margin-top: 45px;
         left: 0;
     }
 
-    .activitiesSection {
-        margin-top: 0px;
-    }
 
-    .activities {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: fit-content;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .activityTile {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 24px;
-        width: 100%;
-    }
-
+    /* Nav buttons */
     nav { 
         width: 100%; 
         margin-top: 45px;
@@ -605,56 +677,34 @@ footer > div > p > a:hover { color: #595959; }
     }
 
     nav > a:hover {
-        border-bottom: 2px solid #0065fc;
         padding-bottom: 11px;
+
+        border-bottom: 2px solid #0065fc;
     }
 
+    .always_active {
+        padding-bottom: 11px;
+
+        border-bottom: 2px solid #0065fc;
+    }
+
+
+
+    /*************/
+    /*** Main ***/
+    /***********/
     main {
         margin-top: 40px;
     }
 
-    .hosts_and_activities {
-        flex-direction: column-reverse;
-    }
-
-    #hosts_title {
-        left: 15.5px;
-    }
-
-    .popular_chartLine {
-        right: 15.5px;
-    }
-
-    .hosts {
-        background-color: white;
-        border-radius:unset;
-    }
-
-    .mostPopular {
-        border-radius:unset;
-    }
-
-    .mostPopularTiles {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .hostTiles {
-        padding-left: 0;
-        padding-right: 0;
-        grid-template-columns: 1fr;
-    }
-    
+    /* Introduction */
     .introduction {
         margin-block-end: 2em;
     }
 
-    .always_active {
-        border-bottom: 2px solid #0065fc;
-        padding-bottom: 11px;
-    }
 
-    .searchBar {
+    /* Search section */
+    .searchBar { /* Search bar */
         width: 337px;
     }
 
@@ -666,10 +716,70 @@ footer > div > p > a:hover { color: #595959; }
         display: none;
     }
 
+
+    /* Host sections */
+    #hostResult_and_popularHosts {
+        flex-direction: column-reverse;
+        margin: auto 0px auto 0px;
+    }
+
+    .hostSection_title {
+        left: 15.5px;
+    }
+
+    /* Hosts from search result section */
+    .hostResult {
+        background-color: white;
+        border-radius: unset;
+    }
+
+    .hostResult_tiles {
+        grid-template-columns: 1fr;
+        margin: auto 15.5px auto 15.5px;
+        padding: auto 0 auto 0;
+    }
+
+    /* Popular hosts section */
+    .popularHosts {
+        margin: auto 0px auto 0px;
+        border-radius: unset;
+    }
+
+    .popularHosts_chartLine {
+        right: 15.5px;
+    }
+
+    .popularHosts_tiles {
+        margin: auto 15.5px auto 15.5px;
+        padding: auto 0 auto 0;
+    }
+
+
+    /* Activities section */
+    .activitySection {
+        margin-top: 0px;
+    }
+
+    .activityTiles {
+        height: initial;
+        margin: auto 15.5px auto 15.5px;
+    }
+
+    .activityTile {
+        width: 100%;
+        margin: 24px 0 0 auto;
+    }
+
+
+
+    /***************/
+    /*** Footer ***/
+    /*************/
     footer {
         flex-direction: column;
     }
 
+    /* Footer info sections (about, our hosts or assistance) */
     footer > div {
         width: 100%;
     }
