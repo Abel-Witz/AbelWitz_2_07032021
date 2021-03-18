@@ -131,7 +131,7 @@ main {
 
 /* Introduction */
 .introduction_title {
-    margin: 0px auto 0.4em 3.5%;
+    margin: 0px 0 0.4em 3.5%;
 }
 
 .introduction {
@@ -157,7 +157,7 @@ main {
 .searchBar_icon {
     width: 13px;
     height: 18px;
-    margin: 17px auto auto 19px;
+    margin: 17px 0 0 19px;
     padding-right: 21px;
 }
 
@@ -166,6 +166,7 @@ main {
     max-width: 234px;
     height: 49px;
     margin-top: 1px;
+    padding-left: 1ch;
 
     font-weight: 700;
     font-size: larger;
@@ -206,7 +207,7 @@ main {
 /* Search filters */
 .searchFilters {
     flex-wrap: wrap;
-    padding-top: 19px;
+    padding-top: 6px;
 }
 
 .filterSwitch {
@@ -214,7 +215,7 @@ main {
     align-items: center;
     width: fit-content;
     height: 46px;
-    margin-left: 24px;
+    margin: 13px 0 0 24px;
 
     border-radius: 22px 22px 22px 22px;
     border: 2px solid #d9d9d9;
@@ -232,7 +233,7 @@ main {
 .filterSwitch_icon {
     width: 18px;
     height: 17px;
-    margin: 17px auto auto 16px;
+    margin: 17px 0 0 16px;
 
     filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
 }
@@ -244,7 +245,7 @@ main {
 
 /* Result text */
 .resultText {
-    margin: 40px auto 40px 3.5%;
+    margin: 40px 0 40px 3.5%;
 }
 
 .resultText_iconFrame {
@@ -259,14 +260,14 @@ main {
 .resultText_icon {
     width: 4px;
     height: 12px;
-    margin: 5px auto auto 9px;
+    margin: 5px 0 0 9px;
 
     filter: invert(39%) sepia(78%) saturate(6791%) hue-rotate(211deg) brightness(100%) contrast(106%);
 }
 
 .resultText p {
     display: inline-block;
-    margin: 0px auto 0px calc(22px + 12px);
+    margin: 0px 0 0px calc(22px + 12px);
 }
 
 
@@ -334,7 +335,6 @@ main {
     margin-bottom: 66px;
     position: relative;
     top: 10px;
-    left: 40px;
 }
 
 .hostResult_seeMore > a {
@@ -428,7 +428,7 @@ main {
 
 /* Activities section */
 .activitySection {
-    margin: auto 3.5% auto 3.5%;
+    margin: 0 3.5% 0 3.5%;
 }
 
 .activityTiles {
@@ -451,7 +451,7 @@ main {
 }
 
 .activityTitle {
-    margin: 0 auto 0 20px;
+    margin: 0 0 0 20px;
     position: relative;
     top: 20px;
 }
@@ -468,7 +468,7 @@ main {
 }
 
 #ilesDuFrioul {
-    background-image: url("images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+    background-image: url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
     height: 109px;
 }
 
@@ -493,7 +493,7 @@ main {
 /*************/
 footer {
     display: flex;
-    padding: 49px 3.5% 55px 3.5%;
+    padding: 0 3.5% 55px 3.5%;
 
     background-color: #F2F2F2;
 }
@@ -502,6 +502,7 @@ footer {
 footer > div {
     flex-grow: 1;
     width: 0;
+    margin-top: 48px;
 }
 
 footer > div > p > a {
@@ -516,11 +517,11 @@ footer > div > p > a:hover {
 
 
 
-/*////////////////////*/
-/*// LARGE AND MEDIUM //*/
-/*//////////////////*/
+/*///////////////////////*/
+/*// MEDIUM AND LARGE //*/
+/*/////////////////////*/
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 701px) {
     /***************/
     /*** Header ***/
     /*************/
@@ -592,11 +593,15 @@ footer > div > p > a:hover {
 
     /* Host sections */
     #hostResult_and_popularHosts {
-        margin: auto 3.5% auto 3.5%;
+        margin: 0 3.5% 0 3.5%;
     }
 
     .hostSection_title {
         left: 40px;
+    }
+
+    .hostResult_seeMore {
+        margin-left: 40px;
     }
 
     /* Popular hosts section */
@@ -612,12 +617,12 @@ footer > div > p > a:hover {
 
     .activityTiles {
         height: 445px;
-        margin: auto -20px auto -20px;
+        margin: 24px -20px 0 -20px;
     }
 
     .activityTile {
         width: calc((93% - (3 * 40px)) / 4);
-        margin: auto 20px auto 20px;
+        margin: 0 20px 0 20px;
     }
 }
 
@@ -625,7 +630,7 @@ footer > div > p > a:hover {
 /*// LARGE SCREENS //*/
 /*//////////////////*/
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1263px) {
     /*************/
     /*** Main ***/
     /***********/
@@ -651,15 +656,19 @@ footer > div > p > a:hover {
 /*// MEDIUM SCREENS //*/
 /*///////////////////*/
 
-@media only screen and (min-width: 801px) and (max-width: 1262px) {
+@media only screen and (min-width: 701px) and (max-width: 1262px) {
     /*************/
     /*** Main ***/
     /***********/
 
     /* Host sections */
+    .hostResult_tiles { /* Hosts from search result section */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .popularHosts { /* Popular hosts section */
         max-width: 800px;
-        margin: 40px auto auto 0px;
+        margin: 40px 0 0 0px;
     }
 
     .popularHosts_tiles {
@@ -680,7 +689,7 @@ footer > div > p > a:hover {
 /*// SMALL SCREENS //*/
 /*//////////////////*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     /***************/
     /*** Header ***/
     /*************/
@@ -757,7 +766,7 @@ footer > div > p > a:hover {
     /* Host sections */
     #hostResult_and_popularHosts {
         flex-direction: column-reverse;
-        margin: auto 0 auto 0;
+        margin: 0;
     }
 
     .hostSection_title {
@@ -772,13 +781,16 @@ footer > div > p > a:hover {
 
     .hostResult_tiles {
         grid-template-columns: 1fr;
-        margin: auto 15.5px auto 15.5px;
-        padding: auto 0 auto 0;
+        margin-top: 62px;
+        padding: 0;
+    }
+
+    .hostResult_seeMore {
+        margin-left: 15.5px;
     }
 
     /* Popular hosts section */
     .popularHosts {
-        margin: auto 0px auto 0px;
         border-radius: unset;
     }
 
@@ -787,19 +799,19 @@ footer > div > p > a:hover {
     }
 
     .popularHosts_tiles {
-        margin: auto 15.5px auto 15.5px;
-        padding: auto 0 auto 0;
+        margin-top: 62px;
+        padding: 0;
     }
 
 
     /* Activities section */
-    .activityTiles {
-        margin: auto 15.5px auto 15.5px;
+    .activitySection {
+        margin: 0 15.5px 0 15.5px;
     }
 
     .activityTile {
         width: 100%;
-        margin: 24px 0 0 auto;
+        margin: 24px 0 0 0;
     }
 
 
