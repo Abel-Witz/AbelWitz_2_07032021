@@ -83,14 +83,12 @@ header {
 .headerButtons {
     display: flex;
     align-items: flex-end;
-    position: relative;
-    right: 3.5%;
 }
 
 
 /* Nav buttons */
 nav {
-    display: flex;  
+    display: flex;
 }
 
 nav > a {
@@ -148,8 +146,7 @@ main {
 
 .searchBar { /* Search bar */
     display: flex;
-    width: 93vw; /*width: 420px;*/
-    max-width: 336px;
+    width: 93vw;
     height: 51px;
     margin-bottom: 31px;
 
@@ -177,7 +174,6 @@ main {
 }
 
 .searchBar_button {
-    width: 134px;
     height: 51px;
 
     border-radius: 0px 10px 10px 0px;
@@ -207,13 +203,8 @@ main {
 }
 
 
-.searchFilters_title { /* Search filters */
-    display: inline;
-    margin: 0 auto 0 auto;
-}
-
+/* Search filters */
 .searchFilters {
-    display: flex;
     flex-wrap: wrap;
     padding-top: 19px;
 }
@@ -283,7 +274,6 @@ main {
 #hostResult_and_popularHosts {
     display: flex;
     flex-wrap: wrap;
-    margin: auto 3.5% auto 3.5%;
 }
 
 .hostSection {
@@ -296,7 +286,6 @@ main {
 .hostSection_title {
     position: relative;
     top: 47px;
-    left: 40px;
 }
 
 .hostSection_tiles {
@@ -388,8 +377,7 @@ main {
     width: 22px;
     height: 18px;
     position: absolute;
-    top: 65px;
-    right: 32px;
+    top: 50px;
 }
 
 .popularHosts_tile {
@@ -440,7 +428,7 @@ main {
 
 /* Activities section */
 .activitySection {
-    margin: 47px 3.5% auto 3.5%;
+    margin: auto 3.5% auto 3.5%;
 }
 
 .activityTiles {
@@ -449,13 +437,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1230px;
-    height: 445px;
-    margin: auto -20px auto -20px;
 }
 
 .activityTile {
-    width: calc((93% - (3 * 40px)) / 4);
-    margin: auto 20px auto 20px;
     padding-bottom: 36px;
 
     border-radius: 15px 15px 15px 15px;
@@ -517,7 +501,7 @@ footer {
 /* Footer info sections (about, our hosts or assistance) */
 footer > div {
     flex-grow: 1;
-    width: 0%;
+    width: 0;
 }
 
 footer > div > p > a {
@@ -533,7 +517,7 @@ footer > div > p > a:hover {
 
 
 /*////////////////////*/
-/*// LARGE SCREENS //*/
+/*// LARGE AND MEDIUM //*/
 /*//////////////////*/
 
 @media only screen and (min-width: 801px) {
@@ -542,6 +526,11 @@ footer > div > p > a:hover {
     /*************/
     .reserviaLogo {
         margin-top: 52px;
+    }
+
+    .headerButtons {
+        position: relative;
+        right: 3.5%;
     }
 
     /* Nav buttons */
@@ -577,27 +566,70 @@ footer > div > p > a:hover {
     }
 
     /* Introduction */
-    .introduction_title {
-        margin-bottom: 0.4em;
-    }
-    
     .introduction {
-        margin-block-end: 1.5em;
+        margin-bottom: 1.5em;
     }
 
 
     /* Search section */
+    .searchBar { /* Search bar */
+        max-width: 420px;
+    }
+
+    .searchBar_button {
+        width: 134px;
+    }
+
     .searchBar_searchIcon { /* Search bar */
         display: none;
     }
 
-
-    .searchFilters { /* Search filters */
+    /* Search filters */
+    .searchFilters { 
         display: inline-flex;
-        margin-top: 0;
     }
     
 
+    /* Host sections */
+    #hostResult_and_popularHosts {
+        margin: auto 3.5% auto 3.5%;
+    }
+
+    .hostSection_title {
+        left: 40px;
+    }
+
+    /* Popular hosts section */
+    .popularHosts_chartLine {
+        right: 32px;
+    }
+
+
+    /* Activities section */
+    .activitySection {
+        margin-top: 47px;
+    }
+
+    .activityTiles {
+        height: 445px;
+        margin: auto -20px auto -20px;
+    }
+
+    .activityTile {
+        width: calc((93% - (3 * 40px)) / 4);
+        margin: auto 20px auto 20px;
+    }
+}
+
+/*////////////////////*/
+/*// LARGE SCREENS //*/
+/*//////////////////*/
+
+@media only screen and (min-width: 801px) {
+    /*************/
+    /*** Main ***/
+    /***********/
+    
     /* Host sections */
     .hostResult_tiles { /* Hosts from search result section */
         grid-template-columns: 1fr 1fr 1fr;
@@ -612,7 +644,6 @@ footer > div > p > a:hover {
         grid-template-columns: 1fr;
     }
 }
-
 
 
 
@@ -661,6 +692,7 @@ footer > div > p > a:hover {
         flex-direction: column-reverse;
         width: 100%;
         margin-top: 45px;
+        position: relative;
         left: 0;
     }
 
@@ -699,28 +731,33 @@ footer > div > p > a:hover {
 
     /* Introduction */
     .introduction {
-        margin-block-end: 2em;
+        margin-bottom: 2em;
     }
 
 
     /* Search section */
     .searchBar { /* Search bar */
-        width: 337px;
+        max-width: 333px;
     }
 
     .searchBar_button {
-        min-width: 51px;
+        width: 51px;
     }
 
     .searchBar_searchText {
         display: none;
     }
 
+    /* Search filters */
+    .searchFilters {
+        display: flex;
+    }
+
 
     /* Host sections */
     #hostResult_and_popularHosts {
         flex-direction: column-reverse;
-        margin: auto 0px auto 0px;
+        margin: auto 0 auto 0;
     }
 
     .hostSection_title {
@@ -756,12 +793,7 @@ footer > div > p > a:hover {
 
 
     /* Activities section */
-    .activitySection {
-        margin-top: 0px;
-    }
-
     .activityTiles {
-        height: initial;
         margin: auto 15.5px auto 15.5px;
     }
 
