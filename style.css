@@ -2,8 +2,6 @@
 /*** Common elements ***/
 /**********************/
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     margin: 0;
 
@@ -70,6 +68,9 @@ b {
 header {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto 0 auto;
 }
 
 .reserviaLogo {
@@ -125,8 +126,9 @@ nav > a {
 /*** Main ***/
 /***********/
 main {
-    flex-grow: 1;
     padding-bottom: 62px;
+    max-width: 1440px;
+    margin: 0 auto 0 auto;
 }
 
 /* Introduction */
@@ -274,7 +276,6 @@ main {
 /* Host sections */
 #hostResult_and_popularHosts {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .hostSection {
@@ -311,8 +312,6 @@ main {
 
 /* Hosts from search result section */
 .hostResult_tile {
-    width: fit-content;
-    height: fit-content;
     margin: 15.5px;
     padding: 5px;
 
@@ -322,8 +321,7 @@ main {
 }
 
 .hostResult_tileImage {
-    width: 212.4px;/*236px;*/
-    height: 102.6px;/*114px;*/
+    height: 102.6px;
     margin-bottom: 12px;
 
     border-radius: 10px 10px 0px 0px;
@@ -373,6 +371,10 @@ main {
 
 
 /* Popular hosts section */
+.popularHosts {
+    flex-grow: 0.47;
+}
+
 .popularHosts_chartLine {
     width: 22px;
     height: 18px;
@@ -382,7 +384,6 @@ main {
 
 .popularHosts_tile {
     display: flex;
-    max-width: 253px;
     height: 120.6px;
     margin: 15.5px;
     padding: 5px;
@@ -394,8 +395,9 @@ main {
 
 .popularHosts_tileImage {
     display: inline-block;
-    min-width: 74.3px; /*127px;*/
-    height: 120.6px;/*134px;*/
+    width: 37%;
+    max-width: 127px;
+    height: 120.6px;
 
     border-radius: 10px 0px 0px 10px;
     background-position: center;
@@ -403,7 +405,7 @@ main {
 }
 
 .popularTileInfo {
-    margin-right: 33.6px;
+    max-width: 63%;
     position: relative;
 }
 
@@ -436,7 +438,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1230px;
+    max-width: 1440px;
 }
 
 .activityTile {
@@ -491,37 +493,44 @@ main {
 /***************/
 /*** Footer ***/
 /*************/
-footer {
-    display: flex;
-    padding: 0 3.5% 55px 3.5%;
-
+.pageBottom {
     background-color: #F2F2F2;
+
+}
+
+footer {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+}
+
+.footerSections {
+    margin: 0 3.5% 0 3.5%;
 }
 
 /* Footer info sections (about, our hosts or assistance) */
-footer > div {
-    flex-grow: 1;
-    width: 0;
+.footerSections > div {
     margin-top: 48px;
 }
 
-footer > div > p > a {
+.footerSections > div > p > a {
     text-decoration: none;
     color: black;
 }
 
-footer > div > p > a:hover {
+.footerSections > div > p > a:hover {
     color: #595959;
 }
 
 
 
 
-/*///////////////////////*/
-/*// MEDIUM AND LARGE //*/
-/*/////////////////////*/
+/*//////////////////////*/
+/*// DESKTOP SCREENS //*/
+/*////////////////////*/
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 829px) {
     /***************/
     /*** Header ***/
     /*************/
@@ -600,6 +609,10 @@ footer > div > p > a:hover {
         left: 40px;
     }
 
+    .hostResult {
+        flex-grow: 1;
+    }
+
     .hostResult_seeMore {
         margin-left: 40px;
     }
@@ -616,21 +629,34 @@ footer > div > p > a:hover {
     }
 
     .activityTiles {
+        max-width: 100vw;
         height: 445px;
         margin: 24px -20px 0 -20px;
     }
 
     .activityTile {
-        width: calc((93% - (3 * 40px)) / 4);
+        min-width: calc((93% - (3 * 40px)) / 4);
+        max-width: calc((100% - (3 * 40px)) / 4);;
         margin: 0 20px 0 20px;
+    }
+
+
+
+    /***************/
+    /*** Footer ***/
+    /*************/
+    .footerSections { /* Footer info sections (about, our hosts or assistance) */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-/*////////////////////*/
-/*// LARGE SCREENS //*/
-/*//////////////////*/
 
-@media only screen and (min-width: 1263px) {
+/*/////////////////*/
+/*// DESKTOP XL //*/
+/*///////////////*/
+
+@media only screen and (min-width: 1279px) {
     /*************/
     /*** Main ***/
     /***********/
@@ -651,45 +677,42 @@ footer > div > p > a:hover {
 }
 
 
+/*////////////////*/
+/*// DESKTOP L //*/
+/*//////////////*/
 
-/*/////////////////////*/
-/*// MEDIUM SCREENS //*/
-/*///////////////////*/
-
-@media only screen and (min-width: 701px) and (max-width: 1262px) {
+@media only screen and (min-width: 829px) and (max-width: 1278px) {
     /*************/
     /*** Main ***/
     /***********/
 
     /* Host sections */
+    #hostResult_and_popularHosts {
+        flex-direction: column;
+    }
+
     .hostResult_tiles { /* Hosts from search result section */
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .popularHosts { /* Popular hosts section */
-        max-width: 800px;
+        width: 100%;
         margin: 40px 0 0 0px;
     }
 
     .popularHosts_tiles {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-
-    /* Activities section */
-    .activityTiles {
-        max-width: 840px;
-    }
 }
 
 
 
 
-/*////////////////////*/
-/*// SMALL SCREENS //*/
-/*//////////////////*/
+/*/////////////////////*/
+/*// MOBILE SCREENS //*/
+/*///////////////////*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 828px) {
     /***************/
     /*** Header ***/
     /*************/
@@ -819,12 +842,40 @@ footer > div > p > a:hover {
     /***************/
     /*** Footer ***/
     /*************/
-    footer {
+    .footerSections {
+        display: flex;
         flex-direction: column;
     }
+}
 
-    /* Footer info sections (about, our hosts or assistance) */
-    footer > div {
-        width: 100%;
+
+/*///////////////*/
+/*// MOBILE M //*/
+/*/////////////*/
+
+@media only screen and (min-width: 455px) and (max-width: 828px) {
+    /*************/
+    /*** Main ***/
+    /***********/
+
+    /* Hosts from search result section */
+    .hostResult_tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*///////////////*/
+/*// MOBILE S //*/
+/*/////////////*/
+
+@media only screen and (max-width: 454px) {
+    /*************/
+    /*** Main ***/
+    /***********/
+
+    /* Hosts from search result section */
+    .hostResult_tiles {
+        grid-template-columns: 1fr;
     }
 }
