@@ -838,8 +838,8 @@ footer {
     }
 
     .activityTileImage {
-        min-height: calc(100vh / 6);
-        max-height: calc(100vh / 6);
+        min-height: 102.6px;
+        max-height: 102.6px;
     }
 
 
