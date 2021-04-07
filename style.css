@@ -97,11 +97,11 @@ nav > a {
     text-decoration: none;
 }
 
-[href="#hébergements"] { 
+[href="#hostResult_and_popularHosts"] { 
     color: #0065fc;
 }
 
-[href="#activités"] {
+[href="#activites"] {
     color:  black;
 }
 
@@ -159,13 +159,12 @@ main {
 .searchBar_icon {
     width: 13px;
     height: 18px;
-    margin: 17px 0 0 19px;
-    padding-right: 21px;
+    margin: 17px 19px 0 19px;
 }
 
 .searchBar_input {
-    width: calc(93vw - 102px);
-    max-width: 234px;
+    width: 100%;
+ 
     height: 49px;
     margin-top: 1px;
     padding-left: 1ch;
@@ -221,6 +220,10 @@ main {
 
     border-radius: 22px 22px 22px 22px;
     border: 2px solid #d9d9d9;
+}
+
+.filterSwitch:hover {
+    background-color:#f4f8ff;
 }
 
 .filterSwitch_iconFrame {
@@ -296,6 +299,11 @@ main {
     padding: 20px;
 }
 
+.hostSection_tiles > a {
+    text-decoration: none;
+    color: black;
+}
+
 .tileTitle {
     margin-left: 10px;
 }
@@ -330,9 +338,8 @@ main {
 }
 
 .hostResult_seeMore {
-    margin-bottom: 66px;
     position: relative;
-    top: 10px;
+    margin-top: 10px;
 }
 
 .hostResult_seeMore > a {
@@ -446,6 +453,11 @@ main {
 
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 0px 16px gray;
+}
+
+.activityTile > a {
+    text-decoration: none;
+    color: black;
 }
 
 .activityTileImage {
@@ -587,7 +599,7 @@ footer {
     }
 
     .searchBar_button {
-        width: 134px;
+        min-width: 134px;
     }
 
     .searchBar_searchIcon { /* Search bar */
@@ -615,6 +627,7 @@ footer {
 
     .hostResult_seeMore {
         margin-left: 40px;
+        margin-bottom: 66px;
     }
 
     /* Popular hosts section */
@@ -625,7 +638,7 @@ footer {
 
     /* Activities section */
     .activitySection {
-        margin-top: 47px;
+        padding-top: 47px;
     }
 
     .activityTiles {
@@ -768,12 +781,8 @@ footer {
 
 
     /* Search section */
-    .searchBar { /* Search bar */
-        max-width: 333px;
-    }
-
-    .searchBar_button {
-        width: 51px;
+    .searchBar_button { /* Search bar */
+        min-width: 46px;
     }
 
     .searchBar_searchText {
@@ -830,6 +839,7 @@ footer {
     /* Activities section */
     .activitySection {
         margin: 0 15.5px 0 15.5px;
+        padding-top: 47px;
     }
 
     .activityTile {
@@ -863,6 +873,11 @@ footer {
     /*** Main ***/
     /***********/
 
+    /* Search section */
+    .searchBar { /* Search bar */
+        max-width: 333px;
+    }
+
     /* Hosts from search result section */
     .hostResult_tiles {
         grid-template-columns: 1fr 1fr;
@@ -878,6 +893,11 @@ footer {
     /*************/
     /*** Main ***/
     /***********/
+
+    /* Search section */
+    .searchBar { /* Search bar */
+        max-width: 93vw;
+    }
 
     /* Hosts from search result section */
     .hostResult_tiles {
